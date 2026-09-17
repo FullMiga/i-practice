@@ -2256,3 +2256,78 @@ dialog.modal:not([open]) {
     transform: none;
   }
 }
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-primary-700: #002f6c;
+    --color-primary-600: #004494;
+    --color-primary-500: #0056b3;
+    --color-primary-100: #8fc5ff;
+    --color-primary-050: #e5f1ff;
+    --color-ink: #07111f;
+    --color-text: #26374d;
+    --color-muted: #344760;
+    --color-border: #687b93;
+    --color-surface-soft: #f7faff;
+    --color-success: #0b5d38;
+    --color-warning: #704000;
+    --color-error: #9f1510;
+    --focus-ring:
+      0 0 0 0.1875rem var(--color-surface), 0 0 0 0.375rem var(--color-ink);
+  }
+
+  a:not(.button) {
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: var(--space-1);
+  }
+
+  .home .header,
+  .home .card,
+  .home .submenu,
+  form fieldset,
+  form input,
+  form select,
+  form textarea,
+  .alert,
+  .toast,
+  .modal {
+    border-width: 0.125rem;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --focus-ring: none;
+  }
+
+  :where(a, button, input, select, textarea):focus-visible {
+    outline: 0.1875rem solid Highlight;
+    outline-offset: 0.1875rem;
+    box-shadow: none;
+  }
+
+  .home .button,
+  form button[type="submit"],
+  .modal .actions button,
+  .projects-page .ways article > a {
+    color: ButtonText;
+    background: ButtonFace;
+    border: 0.125rem solid ButtonText;
+  }
+
+  .home .submenu,
+  .alert,
+  .toast,
+  .modal,
+  form input,
+  form select,
+  form textarea {
+    border-color: CanvasText;
+  }
+
+  form .field-message,
+  form [aria-invalid="true"] {
+    color: MarkText;
+    background: Mark;
+  }
+}
