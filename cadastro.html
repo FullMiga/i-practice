@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta
+      name="description"
+      content="Cadastre-se para apoiar a Horizonte Azul com trabalho voluntário, doações ou outras formas de participação."
+   >
+    <title>Cadastro | Horizonte Azul</title>
+  </head>
+
+  <body class="home signup-page">
+    <header class="header grid">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Horizonte Azul, página inicial"
+      >
+        <strong>Horizonte Azul</strong>
+      </a>
+
+      <button
+        class="menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navegacao-principal"
+        aria-label="Abrir menu principal"
+      >
+        <svg class="openicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="closeicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <nav
+        class="nav"
+        id="navegacao-principal"
+        aria-label="Navegação principal"
+      >
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li class="item">
+            <button
+              class="dropbtn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="submenu-projetos"
+            >
+              Projetos
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <ul class="submenu" id="submenu-projetos">
+              <li><a href="projetos.html">Todos os projetos</a></li>
+              <li><a href="projetos.html#doacoes">Como doar</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="button" href="cadastro.html" aria-current="page">
+              Seja voluntário
+            </a>
+          </li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section class="intro grid" aria-labelledby="titulo-cadastro">
+        <header>
+          <p>Faça parte da rede</p>
+          <h1 id="titulo-cadastro">
+            Seu próximo gesto pode transformar uma história
+          </h1>
+          <p>
+            Preencha seus dados para doar, atuar como voluntário ou combinar as
+            duas formas de apoio.
+          </p>
+        </header>
+
+        <aside aria-labelledby="privacidade-resumo">
+          <h2 id="privacidade-resumo">Seus dados estão protegidos</h2>
+          <p>
+            As informações serão utilizadas somente para entrar em contato sobre
+            sua participação nas iniciativas da organização.
+          </p>
+        </aside>
+      </section>
+
+      <section class="formarea grid" aria-labelledby="formulario-titulo">
+        <h2 id="formulario-titulo">Formulário de participação</h2>
+        <p id="campos-obrigatorios">Campos marcados com * são obrigatórios.</p>
+
+        <form action="cadastro.html" method="post">
+          <fieldset>
+            <legend>1. Dados pessoais</legend>
+
+            <p>
+              <label for="nome">Nome completo *</label>
+              <input
+                id="nome"
+                name="nome"
+                type="text"
+                autocomplete="name"
+                minlength="3"
+                maxlength="100"
+                required
+             >
+            </p>
+
+            <p>
+              <label for="email">E-mail *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="120"
+                required
+             >
+            </p>
+
+            <p>
+              <label for="nascimento">Data de nascimento *</label>
+              <input
+                id="nascimento"
+                name="nascimento"
+                type="date"
+                autocomplete="bday"
+                min="1900-01-01"
+                required
+             >
+            </p>
+
+            <p>
+              <label for="cpf">CPF *</label>
+              <input
+                id="cpf"
+                name="cpf"
+                type="text"
+                inputmode="numeric"
+                autocomplete="off"
+                placeholder="000.000.000-00"
+                pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                minlength="14"
+                maxlength="14"
+                aria-describedby="cpf-ajuda"
+                required
+             >
+              <small class="help" id="cpf-ajuda">Digite os 11 números do CPF.</small>
+            </p>
+
+            <p>
+              <label for="telefone">Telefone *</label>
+              <input
+                id="telefone"
+                name="telefone"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
+                placeholder="(00) 00000-0000"
+                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                minlength="14"
+                maxlength="15"
+                aria-describedby="telefone-ajuda"
+                required
+             >
+              <small class="help" id="telefone-ajuda">Informe o DDD e o número.</small>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Endereço</legend>
+
+            <p>
+              <label for="cep">CEP *</label>
+              <input
+                id="cep"
+                name="cep"
+                type="text"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                placeholder="00000-000"
+                pattern="[0-9]{5}-[0-9]{3}"
+                minlength="9"
+                maxlength="9"
+                aria-describedby="cep-ajuda"
+                required
+             >
+              <small class="help" id="cep-ajuda">Digite os oito números do CEP.</small>
+            </p>
+
+            <p>
+              <label for="logradouro">Logradouro *</label>
+              <input
+                id="logradouro"
+                name="logradouro"
+                type="text"
+                autocomplete="address-line1"
+                minlength="3"
+                maxlength="120"
+                required
+             >
+            </p>
+
+            <p>
+              <label for="numero">Número *</label>
+              <input
+                id="numero"
+                name="numero"
+                type="text"
+                autocomplete="address-line2"
+                maxlength="10"
+                placeholder="123 ou S/N"
+                required
+             >
+            </p>
+
+            <p>
+              <label for="complemento">Complemento</label>
+              <input
+                id="complemento"
+                name="complemento"
+                type="text"
+                maxlength="80"
+             >
+            </p>
+
+            <p>
+              <label for="cidade">Cidade *</label>
+              <input
+                id="cidade"
+                name="cidade"
+                type="text"
+                autocomplete="address-level2"
+                minlength="2"
+                maxlength="80"
+                required
+             >
+            </p>
+
+            <p>
+              <label for="estado">Estado *</label>
+              <select
+                id="estado"
+                name="estado"
+                autocomplete="address-level1"
+                required
+              >
+                <option value="">Selecione a UF</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Como deseja participar?</legend>
+
+            <p>
+              <input
+                id="participacao-doacao"
+                name="participacao"
+                type="radio"
+                value="doacao"
+                required
+             >
+              <label for="participacao-doacao">Fazer uma doação</label>
+            </p>
+
+            <p>
+              <input
+                id="participacao-voluntariado"
+                name="participacao"
+                type="radio"
+                value="voluntariado"
+             >
+              <label for="participacao-voluntariado">Ser voluntário</label>
+            </p>
+
+            <p>
+              <input
+                id="participacao-ambos"
+                name="participacao"
+                type="radio"
+                value="ambos"
+             >
+              <label for="participacao-ambos">Participar das duas formas</label>
+            </p>
+
+            <p>
+              <label for="disponibilidade">Disponibilidade</label>
+              <select id="disponibilidade" name="disponibilidade">
+                <option value="">Selecione uma opção</option>
+                <option value="semanal">Semanal</option>
+                <option value="quinzenal">Quinzenal</option>
+                <option value="mensal">Mensal</option>
+                <option value="pontual">Ações pontuais</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="area-interesse">Área de interesse</label>
+              <select id="area-interesse" name="area_interesse">
+                <option value="">Selecione uma frente</option>
+                <option value="educacao">Educação para o futuro</option>
+                <option value="alimentacao">Alimento que acolhe</option>
+                <option value="trabalho">Caminhos profissionais</option>
+                <option value="comunicacao">Comunicação e captação</option>
+                <option value="logistica">Logística e eventos</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                maxlength="500"
+                placeholder="Conte brevemente como gostaria de contribuir"
+              ></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Privacidade e consentimento</legend>
+            <p>
+              <input
+                id="consentimento"
+                name="consentimento"
+                type="checkbox"
+                value="aceito"
+                required
+             >
+              <label for="consentimento">
+                Li e concordo com o uso dos meus dados conforme a Política de
+                Privacidade. *
+              </label>
+            </p>
+          </fieldset>
+
+          <button type="submit">Enviar cadastro</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer grid">
+      <p><strong>Horizonte Azul</strong></p>
+      <p>Conectando pessoas para transformar comunidades.</p>
+      <nav class="footnav" aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li>
+            <a href="cadastro.html" aria-current="page">Seja voluntário</a>
+          </li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <p>
+        <small>&copy; 2026 Horizonte Azul. Todos os direitos reservados.</small>
+      </p>
+    </footer>
+
+    <script type="module" src="assets/js/components.js"></script>
+    <script type="module" src="assets/js/cadastro.js"></script>
+    <script type="module" src="assets/js/navigation.js"></script>
+  </body>
+</html>

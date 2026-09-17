@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta
+      name="description"
+      content="Conheça a Horizonte Azul, ONG que promove educação, inclusão e desenvolvimento comunitário."
+    >
+    <title>Horizonte Azul | Transformando comunidades</title>
+  </head>
+
+  <body class="home">
+    <header class="header grid">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Horizonte Azul, página inicial"
+      >
+        <strong>Horizonte Azul</strong>
+      </a>
+
+      <button
+        class="menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navegacao-principal"
+        aria-label="Abrir menu principal"
+      >
+        <svg class="openicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="closeicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <nav
+        class="nav"
+        id="navegacao-principal"
+        aria-label="Navegação principal"
+      >
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li class="item">
+            <button
+              class="dropbtn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="submenu-projetos"
+            >
+              Projetos
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <ul class="submenu" id="submenu-projetos">
+              <li><a href="projetos.html">Todos os projetos</a></li>
+              <li><a href="projetos.html#doacoes">Como doar</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+            </ul>
+          </li>
+          <li><a class="button" href="cadastro.html">Seja voluntário</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section class="hero grid" aria-labelledby="titulo-principal">
+        <header>
+          <p>Educação, acolhimento e oportunidade</p>
+          <h1 id="titulo-principal">Juntos, ampliamos horizontes</h1>
+          <p>
+            A Horizonte Azul conecta pessoas e recursos para fortalecer
+            comunidades e construir oportunidades duradouras para crianças,
+            jovens e famílias.
+          </p>
+          <p class="actions">
+            <a class="button" href="cadastro.html">Quero ser voluntário</a>
+            <a class="secondary" href="projetos.html">Conhecer os projetos</a>
+          </p>
+        </header>
+
+        <figure>
+          <picture>
+            <source
+              srcset="assets/images/educacao-comunitaria.avif"
+              type="image/avif"
+            >
+            <source
+              srcset="assets/images/educacao-comunitaria.webp"
+              type="image/webp"
+            >
+            <img
+              src="assets/images/educacao-comunitaria.jpg"
+              alt="Crianças participando de uma atividade educativa comunitária"
+              width="1200"
+              height="800"
+              fetchpriority="high"
+            >
+          </picture>
+          <figcaption>
+            Educação que aproxima pessoas e transforma futuros.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="about grid" aria-labelledby="sobre-titulo">
+        <header>
+          <p>Quem somos</p>
+          <h2 id="sobre-titulo">Transformação começa com acesso</h2>
+        </header>
+        <p>
+          Somos uma organização sem fins lucrativos dedicada a reduzir
+          desigualdades por meio de ações de educação, segurança alimentar e
+          formação profissional. Atuamos em parceria com moradores, voluntários
+          e apoiadores para desenvolver soluções adequadas às necessidades de
+          cada comunidade.
+        </p>
+      </section>
+
+      <section class="impact grid" aria-labelledby="impacto-titulo">
+        <header>
+          <p>Nosso impacto</p>
+          <h2 id="impacto-titulo">Resultados construídos em conjunto</h2>
+        </header>
+        <ul>
+          <li><strong>1.200</strong> pessoas atendidas</li>
+          <li><strong>180</strong> voluntários ativos</li>
+          <li><strong>12</strong> comunidades parceiras</li>
+        </ul>
+      </section>
+
+      <section class="projects grid" aria-labelledby="projetos-titulo">
+        <header>
+          <p>Frentes de atuação</p>
+          <h2 id="projetos-titulo">Iniciativas que geram autonomia</h2>
+        </header>
+
+        <article class="card">
+          <h3>Educação para o futuro</h3>
+          <p>
+            Reforço escolar, incentivo à leitura e inclusão digital para
+            crianças e jovens.
+          </p>
+          <a href="projetos.html#iniciativas">Conhecer projeto</a>
+        </article>
+
+        <article class="card">
+          <h3>Alimento que acolhe</h3>
+          <p>
+            Distribuição de alimentos e oficinas sobre nutrição e aproveitamento
+            integral.
+          </p>
+          <a href="projetos.html#iniciativas">Conhecer projeto</a>
+        </article>
+
+        <article class="card">
+          <h3>Caminhos profissionais</h3>
+          <p>
+            Cursos, mentoria e apoio para ampliar oportunidades de trabalho e
+            renda.
+          </p>
+          <a href="projetos.html#iniciativas">Conhecer projeto</a>
+        </article>
+
+        <p class="more"><a href="projetos.html">Ver todos os projetos</a></p>
+      </section>
+
+      <section class="join grid" aria-labelledby="participacao-titulo">
+        <h2 id="participacao-titulo">
+          Sua participação transforma possibilidades
+        </h2>
+        <p>
+          Compartilhe seu tempo e suas habilidades. Cada pessoa voluntária
+          fortalece nossa rede e ajuda a ampliar o alcance das iniciativas.
+        </p>
+        <a class="button" href="cadastro.html">Faça parte da rede</a>
+
+        <figure>
+          <picture>
+            <source
+              srcset="assets/images/rede-voluntarios.avif"
+              type="image/avif"
+            >
+            <source
+              srcset="assets/images/rede-voluntarios.webp"
+              type="image/webp"
+            >
+            <img
+              src="assets/images/rede-voluntarios.jpg"
+              alt="Grupo de voluntários reunido durante uma ação comunitária"
+              width="1200"
+              height="1800"
+              loading="lazy"
+            >
+          </picture>
+          <figcaption>
+            Uma rede de pessoas mobilizada por novas possibilidades.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        class="contact grid"
+        id="contato"
+        aria-labelledby="contato-titulo"
+      >
+        <header>
+          <p>Fale conosco</p>
+          <h2 id="contato-titulo">Estamos perto para ouvir você</h2>
+        </header>
+
+        <address>
+          <p>Rua das Palmeiras, 120, São Paulo - SP, 01234-000</p>
+          <p><a href="tel:+551130304040">(11)&nbsp;3030&#8209;4040</a></p>
+          <p>
+            <a href="mailto:contato@horizonteazul.org.br"
+              >contato@horizonteazul.org.br</a
+            >
+          </p>
+        </address>
+      </section>
+    </main>
+
+    <footer class="footer grid">
+      <p><strong>Horizonte Azul</strong></p>
+      <p>Conectando pessoas para transformar comunidades.</p>
+      <nav class="footnav" aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Seja voluntário</a></li>
+        </ul>
+      </nav>
+      <p>
+        <small>&copy; 2026 Horizonte Azul. Todos os direitos reservados.</small>
+      </p>
+    </footer>
+    <script type="module" src="assets/js/components.js"></script>
+    <script type="module" src="assets/js/cadastro.js"></script>
+    <script type="module" src="assets/js/navigation.js"></script>
+  </body>
+</html>

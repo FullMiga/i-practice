@@ -1,0 +1,11 @@
+# Dependências e saídas de build
+node_modules/
+dist/
+
+# Arquivos locais de ferramentas e sistema
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example

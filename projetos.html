@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta
+      name="description"
+      content="Conheça os projetos sociais da Horizonte Azul e saiba como contribuir por meio de doações ou trabalho voluntário."
+   >
+    <title>Projetos | Horizonte Azul</title>
+  </head>
+
+  <body class="home projects-page">
+    <header class="header grid">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Horizonte Azul, página inicial"
+      >
+        <strong>Horizonte Azul</strong>
+      </a>
+
+      <button
+        class="menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navegacao-principal"
+        aria-label="Abrir menu principal"
+      >
+        <svg class="openicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="closeicon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <nav
+        class="nav"
+        id="navegacao-principal"
+        aria-label="Navegação principal"
+      >
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li class="item">
+            <button
+              class="dropbtn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="submenu-projetos"
+              aria-current="page"
+            >
+              Projetos
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </button>
+            <ul class="submenu" id="submenu-projetos">
+              <li>
+                <a href="projetos.html" aria-current="page"
+                  >Todos os projetos</a
+                >
+              </li>
+              <li><a href="projetos.html#doacoes">Como doar</a></li>
+              <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+            </ul>
+          </li>
+          <li><a class="button" href="cadastro.html">Seja voluntário</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section class="hero grid" aria-labelledby="titulo-principal">
+        <header>
+          <p>Nossas frentes de atuação</p>
+          <h1 id="titulo-principal">
+            Toda transformação começa com um primeiro gesto
+          </h1>
+          <p>
+            Conheça nossas iniciativas e encontre a melhor forma de contribuir
+            com tempo, conhecimento ou apoio financeiro.
+          </p>
+          <p class="actions">
+            <a class="button" href="#iniciativas">Conhecer iniciativas</a>
+            <a class="secondary" href="#como-participar">Como participar</a>
+          </p>
+        </header>
+
+        <figure>
+          <picture>
+            <source
+              srcset="assets/images/tecnologia-social.avif"
+              type="image/avif"
+           >
+            <source
+              srcset="assets/images/tecnologia-social.webp"
+              type="image/webp"
+           >
+            <img
+              src="assets/images/tecnologia-social.jpg"
+              alt="Monitor de computador exibindo código HTML de uma página web"
+              width="1200"
+              height="800"
+              fetchpriority="high"
+           >
+          </picture>
+          <figcaption>
+            Tecnologia e organização conectando pessoas a causas reais.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        class="initiatives grid"
+        id="iniciativas"
+        aria-labelledby="iniciativas-titulo"
+      >
+        <header>
+          <p>Projetos ativos</p>
+          <h2 id="iniciativas-titulo">Atuação contínua, impacto próximo</h2>
+          <p>
+            Três frentes conectadas por um mesmo propósito: gerar autonomia.
+          </p>
+        </header>
+
+        <div class="list" data-template-list="initiatives"></div>
+
+        <template id="initiative-template">
+          <article>
+            <h3>Nome do projeto</h3>
+            <p class="description">Descrição do projeto.</p>
+            <p class="meta"><strong>Frequência:</strong> <span>Resultado.</span></p>
+          </article>
+        </template>
+      </section>
+
+      <section
+        class="ways grid"
+        id="como-participar"
+        aria-labelledby="participacao-titulo"
+      >
+        <header>
+          <h2 id="participacao-titulo">Escolha como participar</h2>
+          <p>
+            Contribuições financeiras e trabalho voluntário fortalecem todas as
+            nossas frentes de atuação.
+          </p>
+        </header>
+
+        <article id="doacoes">
+          <header>
+            <p>Contribuição financeira</p>
+            <h3>Sua doação vira ação concreta</h3>
+          </header>
+          <p>
+            Escolha uma contribuição única ou mensal. Todo recurso é acompanhado
+            e divulgado em nossos relatórios.
+          </p>
+          <h4>Destino das doações</h4>
+          <ul>
+            <li><strong>64%:</strong> atividades e materiais.</li>
+            <li><strong>24%:</strong> equipes e formação.</li>
+            <li><strong>12%:</strong> operação e transparência.</li>
+          </ul>
+          <a href="cadastro.html#doacao">Fazer uma doação</a>
+        </article>
+
+        <article id="voluntariado">
+          <header>
+            <p>Trabalho voluntário</p>
+            <h3>Seu talento pode abrir caminhos</h3>
+          </header>
+          <p>
+            Participe presencialmente ou a distância, de forma recorrente ou em
+            ações pontuais.
+          </p>
+          <h4>Áreas de atuação</h4>
+          <ul>
+            <li>Apoio educacional e oficinas.</li>
+            <li>Comunicação e captação.</li>
+            <li>Logística e eventos.</li>
+          </ul>
+          <a href="cadastro.html#voluntario">Quero ser voluntário</a>
+        </article>
+      </section>
+
+      <section class="steps grid" aria-labelledby="etapas-titulo">
+        <header>
+          <p>Como participar</p>
+          <h2 id="etapas-titulo">
+            Simples para começar. Próximo para continuar.
+          </h2>
+        </header>
+
+        <ol data-template-list="steps"></ol>
+
+        <template id="step-template">
+          <li>
+            <h3>Título da etapa</h3>
+            <p>Descrição da etapa.</p>
+          </li>
+        </template>
+      </section>
+
+      <aside class="transparency grid" aria-labelledby="transparencia-titulo">
+        <h2 id="transparencia-titulo">
+          Confiança também se constrói com dados abertos
+        </h2>
+        <p>
+          Publicamos resultados, aplicação de recursos e documentos
+          institucionais para que cada apoiador acompanhe o impacto de sua
+          contribuição.
+        </p>
+        <ul>
+          <li>
+            <a
+              href="mailto:contato@horizonteazul.org.br?subject=Relat%C3%B3rio%20anual%202026"
+            >
+              Solicitar relatório anual 2026
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:contato@horizonteazul.org.br?subject=Presta%C3%A7%C3%A3o%20de%20contas"
+            >
+              Solicitar prestação de contas
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:contato@horizonteazul.org.br?subject=Documentos%20institucionais"
+            >
+              Solicitar documentos institucionais
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer class="footer grid">
+      <p><strong>Horizonte Azul</strong></p>
+      <p>Conectando pessoas para transformar comunidades.</p>
+      <nav class="footnav" aria-label="Navegação do rodapé">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="cadastro.html">Seja voluntário</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <p>
+        <small>&copy; 2026 Horizonte Azul. Todos os direitos reservados.</small>
+      </p>
+    </footer>
+    <script type="module" src="assets/js/components.js"></script>
+    <script type="module" src="assets/js/cadastro.js"></script>
+    <script type="module" src="assets/js/navigation.js"></script>
+  </body>
+</html>
