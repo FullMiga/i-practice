@@ -21,6 +21,8 @@ voluntárias e apoiadoras.
 - JavaScript moderno com ES6 Modules, Fetch API, History API e DOM API.
 - Web Storage API para persistência local.
 - Google Fonts para carregamento da família Inter.
+- Vite para servidor de desenvolvimento e build de produção.
+- esbuild e html-minifier-terser para minificação dos ativos.
 - Git e GitHub com fluxo baseado em GitFlow.
 
 O projeto não utiliza framework ou biblioteca JavaScript em produção. As APIs
@@ -29,8 +31,7 @@ nativas atendem às necessidades atuais sem adicionar dependências ao navegador
 ## Pré-requisitos
 
 - Navegador moderno com suporte a ES6 Modules, Fetch API e History API.
-- Python 3 ou outro servidor HTTP local.
-- Node.js 20 ou superior para executar as ferramentas de validação com `npx`.
+- Node.js 20.19 ou superior e npm para desenvolvimento e build.
 - Git para trabalhar com branches e histórico de versões.
 
 ## Execução local
@@ -42,14 +43,14 @@ git clone https://github.com/FullMiga/i-practice.git
 cd i-practice
 ```
 
-O projeto não possui dependências de execução e, portanto, não exige
-`npm install`. Inicie um servidor local:
+Instale as ferramentas de desenvolvimento e inicie o servidor local:
 
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-Acesse `http://localhost:4173/index.html` no navegador. Não abra os arquivos
+Acesse o endereço indicado pelo Vite no terminal. Não abra os arquivos
 diretamente pelo protocolo `file://`, pois a SPA utiliza `fetch()`.
 
 ## Validação e testes
@@ -78,13 +79,36 @@ interface nos tamanhos desktop e mobile.
 
 ## Build e produção
 
-A aplicação é estática e não exige uma etapa obrigatória de compilação. Os
-arquivos HTML e a pasta `assets` são os artefatos de produção. Antes do deploy,
-execute as validações acima e configure o provedor para publicar a raiz do
-repositório.
+Gere os arquivos otimizados para produção:
+
+```bash
+npm run build
+```
+
+O Vite processa as três páginas HTML como entradas independentes, agrupa os
+módulos, adiciona hashes aos ativos e minifica CSS e JavaScript com esbuild. Um
+plugin local utiliza `html-minifier-terser` para remover comentários e espaços
+desnecessários do HTML. O resultado é gravado em `dist/` sem source maps.
+
+Valide localmente a build final com:
+
+```bash
+npm run preview
+```
+
+O provedor de hospedagem deve executar `npm run build` e publicar a pasta
+`dist/`.
 
 Por utilizar rotas baseadas em arquivos HTML, o servidor deve disponibilizar
 `index.html`, `projetos.html`, `cadastro.html` e todos os arquivos de `assets`.
+
+## Deploy
+
+A aplicação é publicada em
+[GitHub Pages](https://fullmiga.github.io/i-practice/) pelo workflow
+`.github/workflows/deploy-pages.yml`. Cada push na branch `main` instala as
+dependências com `npm ci`, executa `npm run build`, envia a pasta `dist/` como
+artefato e publica uma nova versão automaticamente.
 
 ## Estrutura
 
@@ -93,6 +117,9 @@ i-practice/
 ├── index.html
 ├── projetos.html
 ├── cadastro.html
+├── package.json
+├── vite.config.js
+├── .github/workflows/deploy-pages.yml
 ├── assets/
 │   ├── css/styles.css
 │   ├── images/
